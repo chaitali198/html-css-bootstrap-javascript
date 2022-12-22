@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <script src="js/bootstrap.bundle.min.js"></script>
+        
+    </head>
+    <body class="fw-bold">
+        <div class="container my-5">
+            <div class="bg-info p-3 border border-dark border-5 rounded-3">
+                <legend>Arithmatic Operations</legend>
+                <div class="row d-flex justify-content-center align-items-center bg-grey">
+                    <div class="col-sm-12 col-md-4 col-lg-4">
+                        <label for="no1" >Number 1</label><br>
+                        <input type="number" id="no1" class="form-control" placeholder="Number 1"  onchange="reset()">
+                    </div>
+                    <div class="col-sm-12 col-md-4 col-lg-4">
+                        <label for="op">Operator</label><br>
+
+                        <select class="form-select" aria-label="Default select example" id="operator"  onchange="reset()">
+                            <option selected>Select Operator</option>
+                            <option value="add">+</option>
+                            <option value="sub">-</option>
+                            <option value="mul">*</option>
+                            <option value="div">/</option>
+
+
+                        </select>                
+                    </div>
+                    <div class="col-sm-12 col-md-4 col-lg-4">
+                        <label for="no2">Number 2</label><br>
+
+                        <input type="number" class="form-control" placeholder="Number 2" id="no2"  onchange="reset()">
+                    </div>
+                </div>
+                <div class="d-grid my-5">
+                    <button class="btn btn-primary" type="button" onclick="calculate();">Calculate</button>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-sm-12 col-md-4 col-lg-4">
+                        <label for="answer">Answer</label>
+                        <input type="number" class="form-control" id="answer" disabled>
+                        <br>
+                        <output id="default" class="form-control visually-hidden text-warning"></output>
+
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+
+    </body>
+    <script src="js/main.js"></script>
+</html>
